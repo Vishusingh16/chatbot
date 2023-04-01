@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot</title>
+    <!--Iconacout cdn-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <script defer src="./app.js"></script>
+   
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="log">Chatbot</h2>
+            <div class="search-bar">
+                <i class="uil uil-search"></i>
+                <input type="search" placeholder="search for creators, inspiration , projects ">
+            </div>
+            <div class="create">
+                <label class="btn btn-primary" for="create-post">Create</label>
+                <div class="profile-photo top_image">
+                    <img src="randi.png" alt="image">
+                </div>
+            </div>
+    </nav>
+    <!----------------MOVING TOWARDS THE MAIN CONTENT-->
+    <main>
+        <div class="container">
+            <!--------Left----------->
+            <div class="left">
+                <a class="profile">
+                    <div class="profile-picture">
+                        <img src="kanha.png">
+
+                    </div>
+                    <div class="handle">
+                        <h4>Vaishnav Singh</h4>
+                        <p class="text-muted">
+                            @Vaishnav_singh162
+                        </p>
+                    </div>
+                </a>
+                <!--------------sidebar-->
+                <div class="sidebar">
+                    <a class="menu-item active">
+                        <span><i class="uil uil-home"></i></span>
+                        <h3>Home</h3></span>
+                    </a>
+                    <a class="menu-item active">
+                        <span><i class="uil uil-compass"></i></span>
+                        <h3>Explore</h3></span>
+                    </a>
+                    <a class="menu-item active" id="message-notifications">
+                        <span><i class="uil uil-message"><small class="notification-count">6</small></i></span>
+                        <h3>Messages</h3></span>
+
+                    </a>
+                    <a class="menu-item active" id="notifications">
+                        <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span>
+                        <h3>Notifications</h3></span>
+                    </a>
+                    <!-----notification pop up-------->
+                    <div class="notifications-popup">
+                        <div class="notifcation-box zero">
+                            <div class="dp_image profile-photo">
+                                <img src="atul.jpg">
+                            </div>
+                            <div class="notifications-body">
+                                <b>Atul </b> accepted your friend request
+                                <small class="text-muted">2-Days Ago</small>
+                            </div>
+                        </div>
+                        <div class="notifcation-box one">
+                            <div class="dp_image profile-photo">
+                                <img src="arham.JPG">
+                            </div>
+                            <div class="notifications-body">
+                                <b>arham </b> commented on your post
+                                <small class="text-muted">1 Hour Ago</small>
+                            </div>
+                        </div>
+                        <div class="notifcation-box three">
+                            <div class="dp_image profile-photo">
+                                <img src="arham.JPG">
+                            </div>
+                            <div class="notifications-body">
+                                <b>arham </b> commented on your post you're tagged in
+                                <small class="text-muted">5 minutes Ago</small>
+                            </div>
+                        </div>
+                        <div class="notifcation-box four">
+                            <div class="dp_image profile-photo">
+                                <img src="himanshu.JPG">
+                            </div>
+                            <div class="notifications-body">
+                                <b> Himanshu </b> Liked your post
+                                <small class="text-muted">1 Hour Ago</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-----notification pop up end -------->
+                    </a>
+                    <a class="menu-item active">
+                        <span><i class="uil uil-bookmark"></i></span>
+                        <h3>Bookmarks</h3></span>
+                    </a>
+                    <a class="menu-item active">
+                        <span><i class="uil uil-analytics"></i></span>
+                        <h3>Analytics</h3></span>
+                    </a>
+                    <a class="menu-item active" id="theme">
+                        <span><i class="uil uil-palette"></i></span>
+                        <h3>Theme</h3></span>
+                    </a>
+                    <a class="menu-item active">
+                        <span><i class="uil uil-cog"></i></span>
+                        <h3>Settings</h3></span>
+
+                    </a>
+                </div>
+                <br>
+                <!-------END OF SIDEBAR-->
+                <label for="create-post" class="btn btn-primary">Create Post</label>
+            </div>
+            <!---======================End Of Left--=======================------->
+
+            <!------------middle-->
+            <div class="middle">
+                <!---------stories------------>
+                <div class="stories">
+                    <div class="story">
+                        
+                        <p class="name">vishu singh</p>
+                    </div>
+                    <div class="story">
+                    
+                        <p class="name">Ansh Singh</p>
+                    </div>
+                    <div class="story">
+                     
+                        <p class="name"> Himanshu singh</p>
+                    </div>
+                    <div class="story">
+                        
+                        <p class="name">Ankit Singh</p>
+                    </div>
+                    <div class="story">
+                        
+                        <p class="name"> Harsh Singh</p>
+                    </div>
+                    <div class="story"> 
+                       
+                        <p class="name">Vaishnav Singh</p>
+                    </div>
+                </div>
+                <!-------end of story-->
+                <form class="create-post">
+                    <div class="profile-image">
+                        <img src="hi.png" alt="image">
+                    </div>
+                    <input type="text" placeholder="What's on your mind, vaishnav?"  id="create-post">
+                    <input type="submit" value="post" class="btn btn-primary">
+                </form>
+                <!---------feeds-->
+                <div class="feeds">
+                    <!-----feed-->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="dp_image profile-photo">
+                                    <img src="vishu.jpg">
+                                </div>
+                                <div class="ingo">
+                                    <h3>Vaishnav Singh</h3>
+                                    <small>
+                                        Lucknow , Uttar Pradesh
+                                    </small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+
+                            </span>
+                        </div>
+                        <div class="story_image photo">
+                            <img src="post1.jpg">
+                        </div>
+                        <div class="action-buttons">
+                            <div class="interaction-button">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="post1.jpg"></span>
+                            <span><img src="post2.jpg"></span>
+                            <span><img src="post3.jpg"></span>
+                            <p>Liked by <b>Vaishnav Singh</b> and <b> 432k Others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p>
+                                <b>Vaishnav Singh</b>Lorem ipsum dolor sit amet. <span
+                                    class="hash-tag">#Lifestyle</span>
+                            </p>
+                        </div>
+                        <div class="comments text-muted">View All 300k Comments</div>
+                    </div>
+                    <!--------------end of feed-->
+                    <!-----feed-->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="dp_image profile-photo">
+                                    <img src="vishu.jpg">
+                                </div>
+                                <div class="ingo">
+                                    <h3>Vishu Singh</h3>
+
+                                    <small>
+                                        Lucknow , Uttar Pradesh
+                                    </small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+
+                            </span>
+                        </div>
+                        <div class="story_image photo">
+                            <img src="post2.jpg">
+                        </div>
+                        <div class="action-buttons">
+                            <div class="interaction-button">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="post1.jpg"></span>
+                            <span><img src="post2.jpg"></span>
+                            <span><img src="post3.jpg"></span>
+                            <p>Liked by <b>Vaishnav Singh</b> and <b> 432k Others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p>
+                                <b>Vaishnav Singh</b>Lorem ipsum dolor sit amet. <span
+                                    class="hash-tag">#Lifestyle</span>
+                            </p>
+                        </div>
+                        <div class="comments text-muted">View All 300k Comments</div>
+                    </div>
+                    <!--------------end of feed--><!-----feed-->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="dp_image profile-photo">
+                                    <img src="vishu.jpg">
+                                </div>
+                                <div class="ingo">
+                                    <h3>Vaishnav Singh</h3>
+                                    <small>
+                                        Lucknow , Uttar Pradesh
+                                    </small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+
+                            </span>
+                        </div>
+                        <div class="story_image photo">
+                            <img src="post3.jpg">
+                        </div>
+                        <div class="action-buttons">
+                            <div class="interaction-button">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="post1.jpg"></span>
+                            <span><img src="post2.jpg"></span>
+                            <span><img src="post3.jpg"></span>
+                            <p>Liked by <b>Vaishnav Singh</b> and <b> 432k Others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p>
+                                <b>Vaishnav Singh</b>Lorem ipsum dolor sit amet. <span
+                                    class="hash-tag">#Lifestyle</span>
+                            </p>
+                        </div>
+                        <div class="comments text-muted">View All 300k Comments</div>
+                    </div>
+                    <!--------------end of feed--><!-----feed-->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="dp_image profile-photo">
+                                    <img src="vishu.jpg">
+                                </div>
+                                <div class="ingo">
+                                    <h3>Vaishnav Singh</h3>
+                                    <small>
+                                        Lucknow , Uttar Pradesh
+                                    </small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+
+                            </span>
+                        </div>
+                        <div class="story_image photo">
+                            <img src="eje.webp">
+                        </div>
+                        <div class="action-buttons">
+                            <div class="interaction-button">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="post1.jpg"></span>
+                            <span><img src="post2.jpg"></span>
+                            <span><img src="post3.jpg"></span>
+                            <p>Liked by <b>Rohit Singh</b> and <b> 132k Others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p>
+                                <b>Vaishnav Singh</b>Lorem ipsum dolor sit amet. <span
+                                    class="hash-tag">#Lifestyle</span>
+                            </p>
+                        </div>
+                        <div class="comments text-muted">View All 300k Comments</div>
+                    </div>
+                    <!--------------end of feed--><!-----feed-->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="dp_image profile-photo">
+                                    <img src="vishu.jpg">
+                                </div>
+                                <div class="ingo">
+                                    <h3>Himanshu Singh</h3>
+                                    <small>
+                                        Delhi , Uttar Pradesh
+                                    </small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+
+                            </span>
+                        </div>
+                        <div class="story_image photo">
+                            <img src="new.jpg">
+                        </div>
+                        <div class="action-buttons">
+                            <div class="interaction-button">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="post1.jpg"></span>
+                            <span><img src="post2.jpg"></span>
+                            <span><img src="post3.jpg"></span>
+                            <p>Liked by <b>Vaishnav Singh</b> and <b> 432k Others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p>
+                                <b>Vaishnav Singh</b>Lorem ipsum dolor sit amet. <span
+                                    class="hash-tag">#Lifestyle</span>
+                            </p>
+                        </div>
+                        <div class="comments text-muted">View All 300k Comments</div>
+                    </div>
+                    <!--------------end of feed-->
+
+                    <!-----feed-->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="dp_image profile-photo">
+                                    <img src="vishu.jpg">
+                                </div>
+                                <div class="ingo">
+                                    <h3>Harsh Singh</h3>
+                                    <small>
+                                        Ayodhya , Uttar Pradesh
+                                    </small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+
+                            </span>
+                        </div>
+                        <div class="story_image photo">
+                            <img src="hi.png">
+                        </div>
+                        <div class="action-buttons">
+                            <div class="interaction-button">
+                                <span><i class="uil uil-heart"></i></span>
+                                <span><i class="uil uil-comment-dots"></i></span>
+                                <span><i class="uil uil-share"></i></span>
+                            </div>
+                            <div class="bookmark">
+                                <span><i class="uil uil-bookmark"></i></span>
+                            </div>
+                        </div>
+                        <div class="liked-by">
+                            <span><img src="post1.jpg"></span>
+                            <span><img src="post2.jpg"></span>
+                            <span><img src="post3.jpg"></span>
+                            <p>Liked by <b>Vaishnav Singh</b> and <b> 212k Others</b></p>
+                        </div>
+                        <div class="caption">
+                            <p>
+                                <b>Vaishnav Singh</b>Lorem ipsum dolor sit amet. <span
+                                    class="hash-tag">#Lifestyle</span>
+                            </p>
+                        </div>
+                        <div class="comments text-muted">View All 300k Comments</div>
+                    </div>
+                    <!--------------end of feed-->
+                </div>
+
+                <!--------------------------------------------end of the feeds-------------------------------------------->
+            </div>
+            <!--------------------------------------end if middle------------------------------------------>
+            <!--------right------>
+            <div class="right">
+                <div class="messages">
+                    <div class="heading">
+                        <h4>Messages</h4><i class="uil uil-edit"></i>
+                    </div>
+                    <!-----------search bar------------->
+                    <div class="search-bar">
+                        <i class="uil uil-search-alt"></i>
+                        <input type="search" placeholder="Search-Messages" id="message-search">
+                    </div>
+                    <!-------------------Messages category------------------------>
+                    <div class="category">
+                        <h6 class="active">Primary</h6>
+                        <h6>General</h6>
+                        <h6 class="message-requests">Requests(7)</h6>
+
+                    </div>
+                    <!-------------message--------------->
+                    <div class="message">
+                        <div class="profile-picture">
+                            <img src="vishu.jpg">
+
+                        </div>
+                        <div class="message-body">
+                            <h5>Himanshu Singh</h5>
+                            <p class="text-muted">Jai Shree Ram</p>
+
+                    </div>
+                </div>
+</div>
+                <!---------end of messages------------>
+                <!-----------------------friend-request------------------->
+                <div class="friend-requests">
+                    <h4>Requests</h4>
+                    <div class="request">
+                        <div class="info">
+                            <div class="profile-picture">
+                                <img src="hi.png">
+                            </div>
+                            <div>   
+                                <h5>Harsh Singh</h5>
+                                <p class="text-muted">
+                                    8 Mutual friends
+
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">
+                                Accept
+                            </button>
+                            <button class="btn">
+                                Decline
+
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="request">
+                    <div class="info">
+                        <div class="profile-picture">
+                            <img src="new.jpg">
+                        </div>
+                        <div>
+                            <h5>Rohan Singh</h5>
+                            <p class="text-muted">
+                                8 Mutual friends
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button class="btn btn-primary">
+                            Accept
+                        </button>
+                        <button class="btn">
+                            Decline
+
+
+                        </button>
+                    </div>
+                </div>
+                <div class="request">
+                    <div class="info">
+                        <div class="profile-picture">
+                            <img src="images.jpg">
+                        </div>
+                        <div>
+                            <h5>Siddharth Singh</h5>
+                            <p class="text-muted">
+                                8 Mutual friends
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="action">
+                        <button class="btn btn-primary">
+                            Accept
+                        </button>
+                        <button class="btn">
+                            Decline
+
+
+                        </button>
+                    </div>
+                </div>
+                <!-----------end of right----------------->
+            </div>
+
+    </main>
+
+    <!-- -------theme customization-->
+    <div class="customize-theme">
+        <div class="card">
+            <h2>customize your view</h2>
+            <p class="text-muted">Manage your font size,color and background.
+
+            </p>
+            FONT SIZE
+            <div class="font-size">
+                <h4>Font Size</h4>
+                <div>
+                    <h6>Aa</h6>
+                    <div class="choose-size">
+                        <span class="font-size-1"></span>
+                        <span class="font-size-2"></span>
+                        <span class="font-size-4"></span>
+                        <span class="font-size-3"></span>
+                        <span class="font-size-5"></span>
+
+                    </div>
+                    <h3>Aa</h3>
+                </div>
+            </div>
+            <!---------primary color------------->
+            <div class="color">
+                <h4>Color</h4>
+                <div class="choose-color">
+                    <span class="color-1"></span>
+                    <span class="color-2"></span>
+                    <span class="color-3"></span>
+                    <span class="color-4"></span>
+                    <span class="color-5 active"></span>
+
+                </div>
+
+            </div>
+            <!--------------------------background colors--------------------->
+            <div class="background">
+                <h4> Background</h4>
+                <div class="choose-bg">
+                    <div class="bg-1 active">
+                        <span></span>
+                        <h5 for="bg-1">Light</h5>
+
+
+                    </div>
+                    <div class="bg-2">
+                        <span></span>
+                        <h5>Dim</h5>
+                    </div>
+                    <div class="bg-3" ;>
+                        <span></span>
+                        <h5 for="bg-3">Light Out</h5>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
